@@ -21,9 +21,9 @@ def shut_saving_onesecvideo():
 
 if __name__ == "__main__":
 
-    video_threading=threading.Thread(target=start_saving_onesecvideo)      
-    video_threading.setDaemon(True)
-    video_threading.start()
+    save_threading=threading.Thread(target=start_saving_onesecvideo)      
+    save_threading.setDaemon(True)
+    save_threading.start()
 
     time.sleep(20)
 
