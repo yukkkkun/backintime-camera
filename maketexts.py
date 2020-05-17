@@ -13,7 +13,7 @@ def make_text_newvideos(CNT):
         if ext == '.ts':
             filelists.append([file, os.path.getctime(file)])
 
-    filelists.sort(key=itemgetter(1), reverse=True)
+    filelists.sort(key=itemgetter(1), reverse=False)
 
     save_filelists = []
     delete_filelists = []
