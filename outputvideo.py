@@ -8,11 +8,11 @@ now = datetime.datetime.now()
 filename = 'video' + '{0:%Y%m%d%H%M}'.format(now) + '.mov'
 
 PATH = str(os.path.abspath(__file__)[:-len(os.path.basename(__file__))])
-OUTPUT = filename
+OUTPUT = PATH + filename
 
 
 def outputvideo():
-    command = 'ffmpeg -safe 0 -f concat -i mylist.txt -acodec copy -vcodec copy {}'.format(OUTPUT)
+    command = 'ffmpeg -safe 0 -f concat -i {}mylist.txt -acodec copy -vcodec copy {}'.format(PATH, OUTPUT)
     print(command)
     proc = subprocess.Popen(command, universal_newlines=True, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     print('test1')
@@ -24,6 +24,7 @@ def outputvideo():
 
 
 if __name__ == "__main__":
+
 
     outputvideo()
     print(OUTPUT)
