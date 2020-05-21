@@ -11,11 +11,11 @@ RCCONF = ".rclone.conf"
 def send_gdrive():
 
     filelists = []
-    for file in os.listdir():
+    for file in os.listdir(PATH[:-1]):
         base, ext = os.path.splitext(file)
 
         if ext == '.mov':
-            filelists.append([file, os.path.getctime(file)])
+            filelists.append([file, os.path.getctime(PATH + file)])
 
     filelists.sort(key=itemgetter(1), reverse=True)
     filename = filelists[0][0]

@@ -18,8 +18,8 @@ def outputvideo():
     print('test1')
     output,error = proc.communicate()
     print(output)
-
     print(error)
+
 # ffmpeg -f concat -safe 0 -i C:\C\input.txt -c copy C:\C\output.mp4
 
 
