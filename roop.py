@@ -3,9 +3,7 @@ import threading
 
 import savesinglevideo
 import deleteoldvideo
-import outputvideo
 import maketexts
-import send
 CNT = 30
 
 #save one second video
@@ -14,10 +12,10 @@ save_threading.setDaemon(True)
 save_threading.start()
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
-    time.sleep(30)
-    deleteoldvideo.delete_olds(CNT)
+#     time.sleep(30)
+#     deleteoldvideo.delete_olds(CNT)
     
 
 
